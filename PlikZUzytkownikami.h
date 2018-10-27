@@ -4,6 +4,8 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
+#include <cstdlib>
+
 #include "Uzytkownik.h"
 #include "MetodyPomocnicze.h"
 
@@ -13,11 +15,16 @@ class PlikZUzytkownikami
 {
     string nazwaPlikuZUzytkownikami;
     bool czyPlikJestPusty();
-    string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);
     fstream plikTekstowy;
+
+    string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);
+    Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
+
 public:
     PlikZUzytkownikami();
     void dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik);
+    void wczytajUzytkownikowZPliku(vector <Uzytkownik> &uzytkownicy);
+
 };
 
 #endif // PLIKZUZYTKOWNIKAMI_H
