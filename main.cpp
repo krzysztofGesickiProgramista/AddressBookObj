@@ -5,9 +5,11 @@ using namespace std;
 
 int main()
 {
-    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt");
+    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "Adresaci.txt");
     char wybor;
     int idZalogowanegoUzytkownika = 0;
+    int idOstatniegoAdresata = 0;
+
 
     while (true)
     {
@@ -37,7 +39,7 @@ int main()
             switch (wybor)
             {
             case '1':
-                //idOstatniegoAdresata = dodajAdresata(adresaci, idZalogowanegoUzytkownika, idOstatniegoAdresata);
+                idOstatniegoAdresata = ksiazkaAdresowa.dodajAdresata(idZalogowanegoUzytkownika, idOstatniegoAdresata);
                 break;
             case '2':
                 //wyszukajAdresatowPoImieniu(adresaci);
