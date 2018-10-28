@@ -4,6 +4,7 @@
 #include <iostream>
 #include <sstream>
 #include <cstdlib>
+#include <algorithm>
 
 using namespace std;
 
@@ -15,6 +16,7 @@ public:
     static string konwerjsaIntNaString(int liczba);
     static char wybierzOpcjeZMenuGlownego();
     static char wybierzOpcjeZMenuUzytkownika();
+    static string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
 
 };
 
